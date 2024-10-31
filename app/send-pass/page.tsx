@@ -15,6 +15,7 @@ const PassRestoreContent: React.FC = () => {
     const router = useSearchParams()
     const email: string = router.get('emailRestore') || ''
 
+
     const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
