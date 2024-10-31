@@ -1,8 +1,6 @@
 "use client"
 
 import style from '@/style/profile.module.css';
-import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { getData } from '@/utils/getFullname';
 

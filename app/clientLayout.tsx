@@ -1,7 +1,7 @@
 // app/ClientLayout.tsx
 "use client";
 
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Menu from "@/components/menu";

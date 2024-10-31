@@ -1,7 +1,7 @@
 "use client"
 
 import style from '@/style/search.module.css'
-import { ChangeEventHandler, useState } from 'react';
+import { useState } from 'react';
 import { SearchProps } from '@/types/types';
 
 const Search: React.FC<SearchProps> = ({ searchConfigs, onSearch }) => {

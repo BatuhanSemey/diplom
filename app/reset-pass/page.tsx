@@ -3,7 +3,7 @@
 import '@/style/registration.css'
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const ResetPass: React.FC = () => {
     const params = useSearchParams()
