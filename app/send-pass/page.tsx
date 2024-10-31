@@ -3,9 +3,9 @@
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import '@/style/restore.css'
-import { useState } from "react"
+import { useState, Suspense } from "react"
 
-const PassRestore: React.FC = ({ }) => {
+const PassRestoreContent: React.FC = () => {
     const [message, setMessage] = useState<string>('')
     const [subject, setSubject] = useState<string>('Восстановление пароля')
     const [link, setLink] = useState<string>('Перейдите по ссылке для восстановления пароля: http://localhost:3000/reset-pass')
@@ -77,4 +77,12 @@ const PassRestore: React.FC = ({ }) => {
     )
 }
 
-export default PassRestore
+const PassRestore: React.FC = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <PassRestoreContent />
+        </Suspense>
+    )
+}
+
+export default PassRestore;

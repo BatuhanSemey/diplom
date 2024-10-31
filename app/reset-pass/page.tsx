@@ -3,9 +3,9 @@
 import '@/style/registration.css'
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 
-const ResetPass: React.FC = () => {
+const ResetPassContent: React.FC = () => {
     const params = useSearchParams()
     const token = params.get('token')
 
@@ -16,9 +16,8 @@ const ResetPass: React.FC = () => {
     const [successMessage, setSuccessMessage] = useState<string>('')
     const [hideSuccessResetPass, setHideSuccessResetPass] = useState<boolean>(false)
 
-    /*Валидация полей*/
+    /* Валидация полей */
     const validateInputs = (): boolean => {
-
         let errors: string[] = []
 
         if (password.length < passwordLength || repPassword.length < passwordLength) {
@@ -52,7 +51,6 @@ const ResetPass: React.FC = () => {
         setErrorMessage([])
 
         /* Запрос в БД */
-
         try {
             const response = await fetch(`/api/reset-pass?token=${token}&password=${password}`)
 
@@ -63,7 +61,6 @@ const ResetPass: React.FC = () => {
             const res = await response.json()
 
             setSuccessMessage(res.message)
-
             setHideSuccessResetPass(true)
             setPassword('')
             setRepPassword('')
@@ -90,7 +87,6 @@ const ResetPass: React.FC = () => {
                         placeholder="Новый пароль"
                         disabled={hideSuccessResetPass}
                     />
-
                 </div>
                 <div className='reg_password_block'>
                     <div className='reg_icons_block'>
@@ -121,7 +117,6 @@ const ResetPass: React.FC = () => {
                     </Link>
                 )}
 
-
                 {errorMessage?.length > 0 && (
                     <ul className='error_message'>
                         {errorMessage && errorMessage.map((element, index) => (
@@ -130,9 +125,16 @@ const ResetPass: React.FC = () => {
                     </ul>
                 )}
                 <span className='success_message'>{successMessage}</span>
-
             </form>
         </section>
+    )
+}
+
+const ResetPass: React.FC = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <ResetPassContent />
+        </Suspense>
     )
 }
 
