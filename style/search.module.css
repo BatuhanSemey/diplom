@@ -1,0 +1,110 @@
+.main {
+    position: relative;
+}
+
+.top_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #5B5A79;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.top_block button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.top_block p {
+    color: #fff;
+}
+
+.search_params {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    /* border-radius: 10px; */
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease;
+    position: absolute; 
+    z-index: 10; 
+    top: 40px; 
+    width: 100%;
+}
+
+.open {
+    height: auto;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    height: auto; 
+    opacity: 1;
+    background-color: #fff;
+}
+
+.search_block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+}
+
+.search_param {
+    margin-bottom: 16px; /* Space between each parameter */
+}
+
+.input_field {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input_field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.select_field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    outline: none; 
+    transition: border-color 0.2s;
+}
+
+.select_field:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+.search_btn {
+    max-width: 200px;
+    width: 100%;
+    background-color: #595B79;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search_btn:hover {
+    background-color: #3d3e66;
+}

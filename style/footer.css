@@ -1,0 +1,128 @@
+.main_block_footer,
+.main_block_header {
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #F2F2F7;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    color: #5B5A79;
+}
+
+.footer_block_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
+}
+
+.footer_block_center div {
+    display: flex;
+    align-items: center;
+    padding-left: auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer_block_center div div span {
+    font-weight: bold;
+}
+
+hr {
+    height: 20px;
+    background-color: black;
+}
+
+.footer_block_end {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+
+}
+
+a:hover {
+    color: #1d68a7;
+    text-decoration: underline;
+}
+
+/*HEADER*/
+
+.main_block_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header_menu_block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header_exit_block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.language_list_header {
+    color: white; ;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.language_list_header select {
+    font-family: "Rubik", sans-serif;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.header_btn {
+    border: none;
+    cursor: pointer;
+}
+
+.header_menu_block img:last-of-type:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main_block_footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer_block_center {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .footer_block_end {
+        position: relative;
+        margin: 10px 0 0 0;
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .main_block_footer {
+        padding: 10px;
+    }
+
+    hr {
+        height: 10px;
+    }
+
+    .footer_block_center {
+        gap: 5px;
+    }
+
+    .footer_block_end {
+        position: relative;
+    }
+}

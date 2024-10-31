@@ -1,0 +1,125 @@
+.main {
+    height: 100%;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    background-color: #F2F2F7;
+}
+
+.profile_header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    background: #5B5A79;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.profile_header p {
+    color: #fff;
+}
+
+.profile_header div {
+    position: relative;
+}
+
+.img_1 {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.img_2 {
+    position: absolute; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+}
+
+.form {
+    margin: auto;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #F2F2F7;
+}
+
+.current_pass_block,
+.new_pass_block,
+.rep_new_pass_block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.current_pass_block div,
+.new_pass_block div,
+.rep_new_pass_block div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+
+.from input {
+    border: 2px solid #595B79A6;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.block_btn {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.edit_password {
+    padding: 10px 15px;
+    background-color: #5B5A79;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.messages {
+    width: 100% ;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messages div {
+    max-width: 300px;
+}
+
+.error_message {
+    padding: 0;
+    margin: 5px 0; 
+    color: #af0012;
+}
+
+.error_message li {
+    font-size: .8em;
+    padding: 5px; 
+    margin-bottom: 2px; 
+    transition: background-color 0.3s;
+}
+
+.success_message {
+    font-size: .8em;
+    transition: background-color 0.3s;
+    color: green;
+}

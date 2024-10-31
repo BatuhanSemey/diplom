@@ -1,0 +1,57 @@
+.main {
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    margin: 0 20px;
+    border-radius: 10px;
+    background-color: #F2F2F7;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.block_table table {
+    font-size: 13px;
+    width: 100%; 
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.block_table thead th {
+    background: #DEDEDE;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.block_table tbody td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.block_table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.pagination {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pagination div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination div button img {
+    padding: 5px 10px;
+}
