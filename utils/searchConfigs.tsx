@@ -31,7 +31,7 @@ export const searchConfigsPayIn: searchConfigType[] = [
             {value: '', label: ''},
             { value: 'RUB', label: 'RUB' },
             { value: 'USD', label: 'USD' },
-            { value: 'KZ', label: 'KZ' }
+            { value: 'KZT', label: 'KZT' }
         ]
     },
     {
