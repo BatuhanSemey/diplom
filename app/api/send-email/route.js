@@ -16,7 +16,7 @@ export async function POST(request) {
 
     //Ищем пользователя в БД
     const user = await pool.query(
-        'SELECT * FROM accounts WHERE email = $1',
+        'SELECT * FROM accounts2 WHERE email = $1',
         [email]
     );
 
