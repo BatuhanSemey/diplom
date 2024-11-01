@@ -13,7 +13,7 @@ export async function POST(request) {
 
         // Вставка данных в базу
         const result = await pool.query(
-            'INSERT INTO accounts (fullname, email, password) VALUES ($1, $2, $3) RETURNING id',
+            'INSERT INTO accounts2 (fullname, email, password) VALUES ($1, $2, $3) RETURNING id',
             [fullName, email, hashPass]
         );
 
@@ -56,7 +56,7 @@ export async function GET(request) {
     try {
 
         /* Получаем данные с postgreSQL */
-        const result = await pool.query('SELECT * FROM accounts WHERE email = $1', [email])
+        const result = await pool.query('SELECT * FROM accounts2 WHERE email = $1', [email])
 
         const userData = await result.rows[0]
 

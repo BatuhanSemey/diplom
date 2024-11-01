@@ -22,7 +22,7 @@ export async function GET(request) {
         const email = decodedToken.email
 
         /* Получаем данные с postgreSQL */
-        const result = await pool.query('SELECT * FROM accounts WHERE email = $1', [email])
+        const result = await pool.query('SELECT * FROM accounts2 WHERE email = $1', [email])
 
         const userData = await result.rows[0]
 
@@ -46,7 +46,7 @@ export async function GET(request) {
         const hashNewPassword = await bcrypt.hash(newPassword, 10)
 
         //Обновляем пароль пользователя
-        await pool.query('UPDATE accounts SET password = $1 WHERE email = $2', [hashNewPassword, email])
+        await pool.query('UPDATE accounts2 SET password = $1 WHERE email = $2', [hashNewPassword, email])
 
         return new Response(JSON.stringify({message: `Пароль успешно изменен.`}), {
             status: 200,

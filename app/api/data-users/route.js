@@ -20,7 +20,7 @@ export async function POST(request) {
         const email = decodedToken.email
 
         /* Получаем данные с postgreSQL */
-        const result = await pool.query('SELECT * FROM accounts WHERE email = $1', [email])
+        const result = await pool.query('SELECT * FROM accounts2 WHERE email = $1', [email])
 
         const userData = await result.rows[0]
 
